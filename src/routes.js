@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router-dom";
-import { Countries } from "./components/countries";
+import { Home } from "./components/home";
 import { Country } from "./components/country";
 import NotFound from "./components/404";
 
@@ -9,7 +9,7 @@ export const Routes = () => {
 
         {
             path: 'countries',
-            element: <Countries />
+            element: <Home />
         },
         {
             path: 'country',
@@ -18,7 +18,7 @@ export const Routes = () => {
         {
             path: '',
             redirectTo: 'countries',
-            element: <Countries />
+            element: <Home />
         },
         {
             path: '*',

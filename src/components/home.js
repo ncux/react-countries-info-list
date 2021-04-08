@@ -4,7 +4,7 @@ import { Navbar } from "./navbar";
 import Loading from "./loading/loading";
 import { config } from "../config";
 
-export const Countries = () => {
+export const Home = () => {
 
     const { countryUrl, countriesUrl, regionUrl, httpHeaders } = config;
 
@@ -92,7 +92,7 @@ export const Countries = () => {
             </div>
 
             <div>
-                
+
             </div>
         </div>
     );
