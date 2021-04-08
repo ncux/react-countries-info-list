@@ -21,6 +21,11 @@ export const Routes = () => {
             element: <Home />
         },
         {
+            path: 'details/:country_name',
+            redirectTo: 'countries',
+            element: <Home />
+        },
+        {
             path: '*',
             element: <NotFound />
         }

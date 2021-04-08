@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Navbar } from "./navbar";
 import Loading from "./loading/loading";
+import { Countries } from "./countries";
+
 import { config } from "../config";
 
 export const Home = () => {
@@ -91,9 +93,7 @@ export const Home = () => {
                 </select>
             </div>
 
-            <div>
-
-            </div>
+            <Countries countries={ countries } />
         </div>
     );
 

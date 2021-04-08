@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 
-export const Country = ({ country }) => {
+export const CountryDetails = ({ country }) => {
 
     const { alpha2Code } = country;
 
     return (
-        <Link to={{ pathname: `/details/${country}`, state: country }}>
+        <Link to={`/details/${country}`}>
             conlcllc
 
         </Link>
