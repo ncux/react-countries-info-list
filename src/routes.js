@@ -2,6 +2,7 @@ import { useRoutes } from "react-router-dom";
 import { Home } from "./components/home";
 import { Country } from "./components/country";
 import NotFound from "./components/404";
+import {CountryDetails} from "./components/country-details";
 
 export const Routes = () => {
 
@@ -22,8 +23,7 @@ export const Routes = () => {
         },
         {
             path: 'details/:countryName',
-            redirectTo: 'countries',
-            element: <Home />
+            element: <CountryDetails />
         },
         {
             path: '*',

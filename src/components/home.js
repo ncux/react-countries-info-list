@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Navbar } from "./navbar";
 import Loading from "./loading/loading";
 import { Countries } from "./countries";
 
@@ -8,11 +7,10 @@ import { config } from "../config";
 
 export const Home = () => {
 
-    const { countryUrl, countriesUrl, regionUrl, httpHeaders } = config;
+    const { countriesUrl, regionUrl, httpHeaders } = config;
 
     const [loading, setLoading] = useState(false);
     const [query, setQuery] = useState('');
-    const [country, setCountry] = useState('');
     const [region, setRegion] = useState('');
     const [countries, setCountries] = useState([]);
 
@@ -42,7 +40,7 @@ export const Home = () => {
         }
     };
 
-    const searchCountry = async () => {
+    const filterCountry = async () => {
         try {
             if(query?.length) {
                 setCountries([...countries?.filter(country => country?.name?.toLowerCase().includes(query.toLowerCase()))]);
@@ -62,7 +60,7 @@ export const Home = () => {
 
     useEffect(() => filterRegion(), [region]);
 
-    useEffect(() => searchCountry(), [query]);
+    useEffect(() => filterCountry(), [query]);
 
     if(loading) return (<Loading />);
 
