@@ -11,9 +11,8 @@ export const Countries = ({ countries }) => {
                 countries?.length > 0 ? (
                     countries.map((country, i) => {
                         return (
-                            <Link to={{ pathname: `/details/${country}`, state: country }}>
-                                conlcllc
-
+                            <Link key={country?.alpha2Code} to={{ pathname: `/details/${country.name}`, state: country }}>
+                                <Country country={ country } />
                             </Link>
                         );
                     })

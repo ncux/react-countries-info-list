@@ -21,7 +21,7 @@ export const Routes = () => {
             element: <Home />
         },
         {
-            path: 'details/:country_name',
+            path: 'details/:countryName',
             redirectTo: 'countries',
             element: <Home />
         },
